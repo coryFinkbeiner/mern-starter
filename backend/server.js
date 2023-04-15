@@ -9,6 +9,11 @@ connectDB()
 
 const app = express()
 
+// app.use(function(req, res, next) {
+//   res.setHeader("Content-Security-Policy", "script-src 'self' https://fonts.googleapis.com");
+//   return next();
+// });
+
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
