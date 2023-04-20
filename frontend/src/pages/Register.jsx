@@ -25,10 +25,12 @@ function Register() {
 
   useEffect(() => {
     if (isError) {
-      console.log(message)
       toast.error(message)
     }
 
+    if (isSuccess || user) {
+      navigate('/')
+    }
 
     dispatch(reset())
   }, [user, isError, isSuccess, message, navigate, dispatch])
@@ -53,9 +55,6 @@ function Register() {
       }
 
       dispatch(register(userData))
-      if (isSuccess || user) {
-        navigate('/')
-      }
     }
   }
 
