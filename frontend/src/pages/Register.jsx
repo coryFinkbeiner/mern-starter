@@ -54,7 +54,7 @@ function Register() {
         password,
       }
 
-      dispatch(register(userData)) // this is where the post to '/' starts
+      dispatch(register(userData)) 
     }
   }
 
