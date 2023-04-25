@@ -15,13 +15,19 @@ const getSessions = asyncHandler(async (req, res) => {
 // @route POST /api/goals
 // @access Private
 const setSession = asyncHandler(async (req, res) => {
-  if (!req.body.text) {
+
+  // console.log('session req', req.body.hero)
+
+  if (!req.body) {
     res.status(400)
     throw new Error('Please set session')
   }
 
   const session = await Session.create({
-    text: req.body.text
+    hero: req.body.hero,
+    villain: req.body.villain,
+    HStack: req.body.HStack,
+    VStack: req.body.VStack
   })
 
   res.status(200).json(session)
