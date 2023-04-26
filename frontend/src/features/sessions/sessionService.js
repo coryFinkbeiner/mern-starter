@@ -2,7 +2,6 @@ import axios from 'axios'
 
 const API_URL = '/api/sessions/'
 
-// Create new goal
 const createSession = async (sessionData, token) => {
   const config = {
     headers: {
@@ -17,7 +16,7 @@ const createSession = async (sessionData, token) => {
   return response.data
 }
 
-// Get user goals
+
 const getSessions = async (token) => {
   const config = {
     headers: {

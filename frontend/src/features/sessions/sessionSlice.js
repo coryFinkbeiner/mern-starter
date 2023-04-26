@@ -10,7 +10,6 @@ const initialState = {
   message: '',
 }
 
-// Create new goal
 export const createSession = createAsyncThunk(
   'sessions/create',
   async (sessionData, thunkAPI) => {
