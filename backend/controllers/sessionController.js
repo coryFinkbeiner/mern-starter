@@ -58,7 +58,7 @@ const updateSession = asyncHandler(async (req, res) => {
 // @route DELETE /api/:id
 // @access Private
 const deleteSession = asyncHandler(async (req, res) => {
-  const session = await Goal.findById(req.params.id)
+  const session = await Session.findById(req.params.id)
 
   if (!session) {
     res.status(400)
