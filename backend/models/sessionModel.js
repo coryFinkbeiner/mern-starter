@@ -4,12 +4,12 @@ const sessionSchema = mongoose.Schema(
   {
     hero: {
       type: mongoose.Schema.Types.ObjectId,
-      required: false,
+      required: true,
       ref: 'User'
     },
     villain: {
       type: mongoose.Schema.Types.ObjectId,
-      required: false,
+      required: true,
       ref: 'User'
     },
     HStack: {

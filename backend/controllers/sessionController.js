@@ -36,20 +36,23 @@ const setSession = asyncHandler(async (req, res) => {
 // @desc Update goal
 // @route PUT /api/goals/:id
 // @access Private
-const updateSession = asyncHandler(async (req, res) => {
-  const session = await Session.findById(req.params.id)
+// const updateSession = asyncHandler(async (req, res) => {
 
-  if (!session) {
-    res.status(400)
-    throw new Error('Goal not found')
-  }
+//   console.log('REQ', req)
 
-  const updatedSession = await Session.findByIdAndUpdate(req.params.id, req.body, {
-    new: true,
-  })
+  // const session = await Session.findById(req.params.id)
 
-  res.status(200).json(updatedSession)
-})
+  // if (!session) {
+  //   res.status(400)
+  //   throw new Error('Session not found')
+  // }
+
+  // const updatedSession = await Session.findByIdAndUpdate(req.params.id, req.body, {
+  //   new: true,
+  // })
+
+  // res.status(200).json(updatedSession)
+// })
 
 // @desc Delete goal
 // @route DELETE /api/:id
@@ -70,6 +73,6 @@ const deleteSession = asyncHandler(async (req, res) => {
 module.exports = {
   getSessions,
   setSession,
-  updateSession,
+  // updateSession,
   deleteSession,
 }
