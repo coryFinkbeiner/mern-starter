@@ -7,7 +7,7 @@ function Table() {
 
   const dispatch = useDispatch()
 
-  
+
 
   // dispatch(createSession({text}))
 
@@ -15,7 +15,10 @@ function Table() {
 
 
   return (
-    <div >Table</div>
+    <div className='table'>
+      
+      <div></div>
+    </div>
   )
 }
 
