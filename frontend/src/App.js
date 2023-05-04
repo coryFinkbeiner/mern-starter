@@ -3,9 +3,14 @@ import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Header from './components/Header'
 import Dashboard from './pages/Dashboard'
-import Login from './pages/Login'
-import Register from './pages/Register'
-import Table from './pages/Table'
+
+
+import About from './pages/About'
+import Resume from './pages/Resume'
+
+import Projects from './pages/Projects'
+
+import Contact from './pages/Contact'
 import Homepage from './pages/Homepage'
 
 
@@ -17,9 +22,10 @@ function App() {
           <Header />
           <Routes>
             <Route path='/' element={<Homepage />} />
-            <Route path='/login' element={<Login />} />
-            <Route path='/register' element={<Register />} />
-            <Route path='/table' element={<Table />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/resume' element={<Resume />} />
+            <Route path='/projects' element={<Projects />} />
+            <Route path='/contact' element={<Contact />} />
           </Routes>
         </div>
       </Router>
